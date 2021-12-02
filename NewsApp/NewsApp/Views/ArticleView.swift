@@ -12,6 +12,7 @@ import URLImageStore
 struct ArticleView: View {
     
     let article: Article
+    @State var isLoading: Bool
     
     var body: some View {
         HStack {
@@ -33,15 +34,32 @@ struct ArticleView: View {
                 .cornerRadius(10)
             }
             
-            VStack(alignment: .leading, spacing: 4, content: {
+            VStack(alignment: .leading, spacing: 4) {
+                
                 Text(article.title ?? "")
                     .foregroundColor(.black)
                     .font(.system(size: 18, weight: .semibold))
                 Text(article.source ?? "")
                     .foregroundColor(.gray)
                     .font(.footnote)
-            })
+                    
+                if let date = article.date {
+                    HStack {
+                        Text(date, style: .date)
+                            .font(.system(size: 12, weight: .bold))
+                            .foregroundColor(.gray)
+                        Text(date, style: .time)
+                            .foregroundColor(.gray)
+                            .font(.system(size: 12))
+                    }
+                }
+                
+            }
+            
+                
         }
+        .redacted(reason: isLoading ? .placeholder : [])
+        .allowsHitTesting(!isLoading)
     }
 }
 
@@ -56,8 +74,7 @@ struct PlaceholderImageView: View {
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView(article: Article.dummyData)
-            .previewLayout(.sizeThatFits)
+        ArticleView(article: Article.dummyData.first!, isLoading: false).previewLayout(.sizeThatFits)
     }
 }
 

@@ -18,15 +18,17 @@ struct FeedView: View {
         NavigationView {
             Group {
                 switch viewModel.state {
-                case .loading:
-                    ProgressView()
+               
                 case .failed(let error):
-                    ErrorView(error: error, handler: viewModel.getArticles)
-                case .success(let articles):
-                    List(articles) { item in
-                        ArticleView(article: item)
+                    ErrorView(error: error) {
+                        self.viewModel.getArticles()
+                    }
+                
+                default:
+                    List(viewModel.isLoading ? Article.dummyData : viewModel.articles) { article in
+                        ArticleView(article: article, isLoading: false)
                             .onTapGesture {
-                                load(url: item.url)
+                                load(url: article.url)
                             }
                     }
                     .navigationTitle(Text("News"))

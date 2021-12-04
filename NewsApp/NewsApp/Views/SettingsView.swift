@@ -9,7 +9,31 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            
+            Form {
+                Section(
+                    header: Text("Display"),
+                    footer: Text("System settings will override Dark mode and use the current device theme")) {
+                        
+                        Toggle(isOn: .constant(true), label: {
+                        Text("Dark Mode")
+                    })
+                        Toggle(isOn: .constant(true), label: {
+                        Text("Use system settings")
+                    })
+                
+                }
+                
+                Section {
+                      Label("Follow me on twitter @", systemImage: "link")
+                }
+                .foregroundColor(.black)
+                .font(.system(size: 16, weight: .semibold))
+                
+            }
+            .navigationTitle("Settings")
+        }
     }
 }
 

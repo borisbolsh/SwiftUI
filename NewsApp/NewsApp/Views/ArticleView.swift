@@ -58,8 +58,8 @@ struct ArticleView: View {
             
                 
         }
-        .redacted(reason: isLoading ? .placeholder : [])
-        .allowsHitTesting(!isLoading)
+//        .redacted(reason: isLoading ? .placeholder : [])
+//        .allowsHitTesting(!isLoading)
     }
 }
 

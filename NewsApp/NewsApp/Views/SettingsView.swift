@@ -17,16 +17,30 @@ struct SettingsView: View {
                     footer: Text("System settings will override Dark mode and use the current device theme")) {
                         
                         Toggle(isOn: .constant(true), label: {
-                        Text("Dark Mode")
-                    })
+                            Text("Dark Mode")
+                        })
                         Toggle(isOn: .constant(true), label: {
-                        Text("Use system settings")
-                    })
-                
-                }
+                            Text("Use system settings")
+                        })
+                        
+                    }
                 
                 Section {
-                      Label("Follow me on twitter @", systemImage: "link")
+                    
+                    Link(destination: URL(string: Constants.twitter)!,
+                         label: {
+                        
+                            Label("Follow me on Twitter",
+                            systemImage: "link")
+                    })
+                    
+                    Link("Contact me via Email",
+                         destination:  URL(string: Constants.email)!
+                    )
+                    
+                    Link("Call me",
+                         destination:  URL(string: Constants.phone)!)
+                    
                 }
                 .foregroundColor(.black)
                 .font(.system(size: 16, weight: .semibold))

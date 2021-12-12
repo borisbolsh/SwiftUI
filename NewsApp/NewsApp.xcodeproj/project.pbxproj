@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455363B627665FD900ABA0C6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455363B527665FD900ABA0C6 /* Constant.swift */; };
 		45F0968727579469006994A2 /* NewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0968627579469006994A2 /* NewsAppApp.swift */; };
 		45F0968B2757946B006994A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F0968A2757946B006994A2 /* Assets.xcassets */; };
 		45F0968E2757946B006994A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F0968D2757946B006994A2 /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		455363B527665FD900ABA0C6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		45F0968327579469006994A2 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F0968627579469006994A2 /* NewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppApp.swift; sourceTree = "<group>"; };
 		45F0968A2757946B006994A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		455363B427665F4E00ABA0C6 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				45F0968A2757946B006994A2 /* Assets.xcassets */,
+				455363B527665FD900ABA0C6 /* Constant.swift */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
 		45F0967A27579469006994A2 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +86,7 @@
 		45F0968527579469006994A2 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				455363B427665F4E00ABA0C6 /* Resourses */,
 				45F0968627579469006994A2 /* NewsAppApp.swift */,
 				45F096A527579DFD006994A2 /* States */,
 				45F096A227579B2E006994A2 /* Services */,
@@ -83,7 +95,6 @@
 				45F09699275797C1006994A2 /* Model */,
 				45F0969627579643006994A2 /* Views */,
 				45F096A827579E59006994A2 /* ViewModel */,
-				45F0968A2757946B006994A2 /* Assets.xcassets */,
 				45F0968C2757946B006994A2 /* Preview Content */,
 			);
 			path = NewsApp;
@@ -243,6 +254,7 @@
 				45F096B42757B127006994A2 /* ErrorView.swift in Sources */,
 				45F0969F27579A61006994A2 /* APIError.swift in Sources */,
 				45F0969B27579966006994A2 /* NewsEndpoint.swift in Sources */,
+				455363B627665FD900ABA0C6 /* Constant.swift in Sources */,
 				45F096AD2757A1BE006994A2 /* ArticleView.swift in Sources */,
 				45F096A727579E4E006994A2 /* NewsViewModel.swift in Sources */,
 				45F096B62757BB15006994A2 /* SettingsView.swift in Sources */,

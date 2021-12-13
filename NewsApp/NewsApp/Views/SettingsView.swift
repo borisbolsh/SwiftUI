@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @Binding var darkModeEnabled: Bool
+    @Binding var systemThemeEnabled: Bool
+    
     var body: some View {
         NavigationView {
             
@@ -16,11 +20,20 @@ struct SettingsView: View {
                     header: Text("Display"),
                     footer: Text("System settings will override Dark mode and use the current device theme")) {
                         
-                        Toggle(isOn: .constant(true), label: {
+                        Toggle(isOn: $darkModeEnabled, label: {
                             Text("Dark Mode")
                         })
-                        Toggle(isOn: .constant(true), label: {
+                            .onChange(of: darkModeEnabled,  perform: { _ in
+                                SystemThemeManager
+                                    .shared
+                                    .handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
+                            })
+                        Toggle(isOn: $systemThemeEnabled, label: {
                             Text("Use system settings")
+                        }).onChange(of: systemThemeEnabled,  perform: { _ in
+                            SystemThemeManager
+                                .shared
+                                .handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
                         })
                         
                     }
@@ -30,8 +43,8 @@ struct SettingsView: View {
                     Link(destination: URL(string: Constants.twitter)!,
                          label: {
                         
-                            Label("Follow me on Twitter",
-                            systemImage: "link")
+                        Label("Follow me on Twitter",
+                              systemImage: "link")
                     })
                     
                     Link("Contact me via Email",
@@ -42,7 +55,7 @@ struct SettingsView: View {
                          destination:  URL(string: Constants.phone)!)
                     
                 }
-                .foregroundColor(.black)
+                .foregroundColor(Theme.textColor)
                 .font(.system(size: 16, weight: .semibold))
                 
             }
@@ -53,6 +66,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(darkModeEnabled: .constant(false), systemThemeEnabled: .constant(false))
     }
 }

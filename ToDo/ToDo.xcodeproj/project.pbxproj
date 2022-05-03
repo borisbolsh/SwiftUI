@@ -12,6 +12,9 @@
 		4557E9F02820774600E3E242 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4557E9EF2820774600E3E242 /* Preview Assets.xcassets */; };
 		4557E9FA2820783D00E3E242 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4557E9F92820783D00E3E242 /* ListView.swift */; };
 		4557E9FC28207A7D00E3E242 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4557E9FB28207A7D00E3E242 /* ListRowView.swift */; };
+		4557E9FE282080CB00E3E242 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4557E9FD282080CB00E3E242 /* AddView.swift */; };
+		4564BC112820F0B400583711 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564BC102820F0B400583711 /* ItemModel.swift */; };
+		4564BC142820F5F100583711 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564BC132820F5F100583711 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		4557E9EF2820774600E3E242 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4557E9F92820783D00E3E242 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		4557E9FB28207A7D00E3E242 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		4557E9FD282080CB00E3E242 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		4564BC102820F0B400583711 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		4564BC132820F5F100583711 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				4557E9E82820774500E3E242 /* ToDoApp.swift */,
+				4564BC122820F5D600583711 /* ViewModels */,
+				4564BC0F2820F09B00583711 /* Models */,
 				4557E9F62820781800E3E242 /* Views */,
 				4557E9EC2820774600E3E242 /* Assets.xcassets */,
 				4557E9EE2820774600E3E242 /* Preview Content */,
@@ -72,10 +80,27 @@
 		4557E9F62820781800E3E242 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4557E9FD282080CB00E3E242 /* AddView.swift */,
 				4557E9F92820783D00E3E242 /* ListView.swift */,
 				4557E9FB28207A7D00E3E242 /* ListRowView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4564BC0F2820F09B00583711 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4564BC102820F0B400583711 /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4564BC122820F5D600583711 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4564BC132820F5F100583711 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4564BC112820F0B400583711 /* ItemModel.swift in Sources */,
+				4557E9FE282080CB00E3E242 /* AddView.swift in Sources */,
+				4564BC142820F5F100583711 /* ListViewModel.swift in Sources */,
 				4557E9E92820774500E3E242 /* ToDoApp.swift in Sources */,
 				4557E9FA2820783D00E3E242 /* ListView.swift in Sources */,
 				4557E9FC28207A7D00E3E242 /* ListRowView.swift in Sources */,

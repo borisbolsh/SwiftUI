@@ -5,7 +5,19 @@ struct TransactionRow: View {
 
     var body: some View {
 			HStack(spacing: 20) {
-        Text("Hello, World!")
+				VStack(alignment: .leading, spacing: 6) {
+					Text(transaction.merchant)
+						.font(.subheadline)
+						.bold()
+						.lineLimit(1)
+
+					Text(transaction.category)
+						.font(.footnote)
+						.opacity(0.7)
+						.lineLimit(1)
+
+					Text(Date(), format: .dateTime.year().month().day())
+				}
 			}
 			.padding([.top, .bottom], 8)
 		}

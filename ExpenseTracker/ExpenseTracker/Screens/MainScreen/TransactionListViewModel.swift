@@ -5,6 +5,10 @@ final class TransactionListViewModel: ObservableObject {
 	@Published var transactions: [Transaction] = []
 	private var cancellables = Set<AnyCancellable>()
 
+	init() {
+		getTransactions()
+	}
+
 	func getTransactions() {
 		guard let url = URL(string: "https://designcode.io/data/transactions.json") else {
 			print("Invalid URL")
@@ -30,7 +34,6 @@ final class TransactionListViewModel: ObservableObject {
 				}
 			} receiveValue: { [weak self] result in
 				self?.transactions = result
-				// dump(self?.transactions)
 			}
 			.store(in: &cancellables)
 	}

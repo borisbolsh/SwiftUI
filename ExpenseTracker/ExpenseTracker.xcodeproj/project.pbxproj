@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451D50C028874B79002D5891 /* RecentTransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D50BF28874B79002D5891 /* RecentTransactionList.swift */; };
 		4552994B28848F7900B66785 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552994A28848F7900B66785 /* ExpenseTrackerApp.swift */; };
 		4552994D28848F7900B66785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552994C28848F7900B66785 /* ContentView.swift */; };
 		4552994F28848F7B00B66785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4552994E28848F7B00B66785 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451D50BF28874B79002D5891 /* RecentTransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionList.swift; sourceTree = "<group>"; };
 		4552994728848F7900B66785 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4552994A28848F7900B66785 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		4552994C28848F7900B66785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				4552994C28848F7900B66785 /* ContentView.swift */,
 				4552996328849D3D00B66785 /* TransactionRow.swift */,
 				458CD8A32885F160008FC864 /* TransactionListViewModel.swift */,
+				451D50BF28874B79002D5891 /* RecentTransactionList.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				4552994B28848F7900B66785 /* ExpenseTrackerApp.swift in Sources */,
 				458CD89F2885D959008FC864 /* String+Ext.swift in Sources */,
 				4552995B288496A200B66785 /* Color+Ext.swift in Sources */,
+				451D50C028874B79002D5891 /* RecentTransactionList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

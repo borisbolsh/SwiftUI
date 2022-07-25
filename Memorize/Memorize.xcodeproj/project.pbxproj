@@ -11,6 +11,7 @@
 		455D3DDE288A6A43000BCB5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D3DDD288A6A43000BCB5E /* ContentView.swift */; };
 		455D3DE0288A6A44000BCB5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455D3DDF288A6A44000BCB5E /* Assets.xcassets */; };
 		455D3DE3288A6A44000BCB5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455D3DE2288A6A44000BCB5E /* Preview Assets.xcassets */; };
+		45FD2951288E5D77001E0DD0 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD2950288E5D77001E0DD0 /* MemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		455D3DDD288A6A43000BCB5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		455D3DDF288A6A44000BCB5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		455D3DE2288A6A44000BCB5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		45FD2950288E5D77001E0DD0 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				455D3DDB288A6A43000BCB5E /* MemorizeApp.swift */,
 				455D3DDD288A6A43000BCB5E /* ContentView.swift */,
+				45FD2950288E5D77001E0DD0 /* MemoryGame.swift */,
 				455D3DDF288A6A44000BCB5E /* Assets.xcassets */,
 				455D3DE1288A6A44000BCB5E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FD2951288E5D77001E0DD0 /* MemoryGame.swift in Sources */,
 				455D3DDE288A6A43000BCB5E /* ContentView.swift in Sources */,
 				455D3DDC288A6A43000BCB5E /* MemorizeApp.swift in Sources */,
 			);
